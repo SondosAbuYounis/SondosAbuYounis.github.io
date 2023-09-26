@@ -1,0 +1,758 @@
+$font :  Arial, Helvetica, sans-serif;
+$fontSizeMain: 40px;
+$fontSizeCode: 30px;
+$boldFontSize: 55px;
+$fontColorMain:#243859;
+$fontColorSecondary:#487A9D;
+$shadedClips: #E0DBD8;
+$codeFont : monospace;
+$codeColor:  #E63C49;
+$codeFontSize : 30px;
+$activePage : #487A9D;
+$bgNav:#487A9D 0.3;
+
+@media (min-width: 768px) {
+    /* Styles for screens wider than 768px */
+}
+@keyframes grow {
+      10%{
+         height: 20px;
+          width: 2.5px;
+       }
+      100%{
+          height: 70px ;
+          width: 2.5px ;
+       }
+   }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+  }
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+//   indicator:after {
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     display: block;
+//     width: 40px;
+//     height: 2px;
+
+//     transition: transform .2s ease-out, .3s ease-out;
+//     background: #817e7e;
+//   }
+
+
+// .area{
+//     background: #487A9D;  
+//     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+//     width: 100%;
+//     height:100vh;
+// }
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #487A9D;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+.container{
+    background-image: url(clips/Paper.png);
+    position: fixed;
+}
+
+
+.navBar {
+    display: grid;
+    align-items: center;
+    align-content: end;
+    margin: 5%;
+
+}
+
+.navItems {
+    display: inline-block;
+    display:grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    justify-content: center;
+    font-family: $font;
+}
+
+a {
+    color: $fontColorMain;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.pagination {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    column-gap: 7px;
+    justify-content: center;
+    margin-top: 25px;
+
+}
+
+// .pagination {
+//     position: fixed;
+//     left: 50%;
+//     top: 150px;
+//     transform: translateX(-50%);
+//     background-color:$bgNav ;
+// }
+
+.baseSig {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home, .myJourney, .about, .reachOut {
+    height: 40px;
+    width: 2.5px;
+    border-radius: 2.5px;
+    background-color: $shadedClips;
+    animation-name: grow;
+}
+
+.home {
+    background-color: $activePage;
+    animation-name: grow;
+    animation-duration: 1s ;
+    animation-fill-mode: forwards;
+}
+
+.active2 {
+    background-color: $activePage;
+    animation-name: grow;
+    animation-duration: 1s ;
+    animation-fill-mode: forwards;
+}
+
+
+.signature {
+    width: 12%;
+    height: 12%;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.row3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+}
+
+.text {
+    width: 500px;
+    font-family: $font;
+    color: $fontColorSecondary;
+    align-self: center;
+}
+
+.mono1{
+    font-family: $codeFont;
+    color:$codeColor;
+    font-size: $fontSizeCode;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation-iteration-count: infinite;
+    animation:
+      typing 3s steps(100, end) infinite,
+      blink-caret 6s step-end ;
+}
+.mono2 {
+    font-family: $codeFont;
+    font-weight: bold;
+    font-size: 15px;
+    color: $codeColor;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation-iteration-count: infinite;
+    animation:
+      typing 3s steps(100, end) infinite,
+      blink-caret 6s step-end ;
+}
+.name{
+    font-family: $font;
+    color:$fontColorMain;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+    // animation: 1.5s ease-out 0s 1 slideInFromLeft;
+    font-size: $fontSizeMain;
+   
+
+}
+
+b {
+    font-size: $boldFontSize;
+}
+
+.text {
+    font-family: $font;
+    color:$fontColorSecondary;
+    font-size: 15px;
+    transition-delay: 1.5s;
+    text-align: center;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+// .row5{
+//     display: grid;
+//     grid-template-columns: auto auto;
+//     grid-template-rows: auto ;
+//     margin-top: 20%;
+//     display: inline-block;
+// }
+
+.skills {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto ;
+    margin-top: 30%;
+    justify-content: center;
+    column-gap: 15%;
+ 
+    // display: flex;
+    // flex-direction: column;
+//     justify-content: end;
+//     align-items: center;
+    // gap: 20px;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-template-rows: auto auto;
+}
+
+.h1 {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1%;
+}
+.h2 {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+.h11 , .h22 {
+    align-self: flex-start;
+    font-family: $font;
+    color: $fontColorMain;
+}
+// .h1, .h2, .h3 {  
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: start;
+//     font-family: $font;
+//     font-size: $fontSizeCode;
+//     gap:15px;
+// }
+
+.html ,.css,.sass,.postman, .figma, .arabic,.english,.german{
+    font-size: 15px;
+    color: $shadedClips;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: $fontColorMain;
+    offset-path: path("M 100,0 A 100,100 0 1 1 100,200 ");
+    animation: along-a-circle 1.5s linear ;
+    animation-fill-mode: forwards;   
+    justify-content: center;
+    box-shadow: 0px 0px 7px $fontColorSecondary;
+    animation-iteration-count: 2;
+
+}
+
+@keyframes along-a-circle {
+    100% {
+      offset-distance:30%;
+    }
+    
+  }
+.txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: $font; 
+    color: white;
+    display: block;
+}
+
+.txt2 {
+ 
+        font-family: $font;
+        color: $shadedClips;
+        font-size: 12px;
+        position: relative;
+        font-weight: lighter;
+
+}
+
+.SH {
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.html{
+    background-color: $fontColorMain;
+    
+}
+.css {
+    background-color: $fontColorSecondary;
+    
+}
+.sass {
+    background-color: $fontColorMain;
+}
+.postman {
+    background-color: $fontColorSecondary;
+}
+.figma {
+    background-color: $fontSizeMain;
+}
+.arabic{
+    background-color: $fontColorMain;
+}
+.english{
+    background-color: $fontColorSecondary;
+}
+.german{
+    background-color: $fontColorMain;
+}
+
+.row8 {
+    margin-top: 10%;
+    display: inline-block;
+   
+    text-align: center;
+   
+}
+
+.row8 {
+    background-image: url(clips/Ellipse8.png);
+    background-position: center;
+    margin-left: 50%;
+    width: 654px;
+    height: 545px;
+    transform: translateX(-50%);
+    margin-bottom: 10%;
+}
+
+.bgMyJourney{
+ 
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(6, 60px);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 20px;
+    // background-color: beige;
+ }
+
+.sphere1{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    grid-column: 3;
+    grid-row: 4;
+    background-color: aquamarine;
+    align-self: baseline;
+}
+.sphere2{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    grid-column: 6;
+    grid-row: 5;
+    background-color: aquamarine;
+    align-self: baseline;
+}
+.sphere3{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    grid-column: 7;
+    grid-row: 3;
+    background-color: aquamarine;
+    align-self: baseline;
+}
+.sphere4{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    grid-column: 9;
+    grid-row: 2;
+    background-color: aquamarine;
+    align-self: baseline;
+}
+
+.sphere1,.sphere2,.sphere3,.sphere4 {
+    box-shadow: 0px 0px 10px $fontColorSecondary;
+    animation: bounce 1.5s;
+    animation-iteration-count: 2;
+    background-color: white;
+}
+.sphere1:hover {
+    animation: bounce-hover 1s infinite;
+    animation-fill-mode: forwards;
+}
+.sphere2:hover {
+    animation: bounce-hover 1s infinite;
+}
+.sphere3:hover {
+    animation: bounce-hover 1s infinite;
+}
+.sphere4:hover {
+    animation: bounce-hover 1s infinite;
+}
+.bold {
+    font-family: $font;
+    color: $codeColor;
+    font-size: 12px;
+    position: relative;
+    font-weight: bold;
+}
+.light {
+    font-family: $font;
+    color: $fontColorSecondary;
+    font-size: 12px;
+    position: relative;
+    font-weight: lighter;
+}
+
+.oran {
+    color:#e85c35 ;
+}
+ 
+.soon {
+    color: $shadedClips;
+}
+p{
+    padding-top: 3%;
+}
+
+.row4{
+    text-align: center;
+}
+.more{
+    color: $activePage;
+    font-family: $font;
+
+}
+ 
+
+// .arrow {
+//     text-orientation: rotate(90);
+// }
+
+
+.icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+
+ .row6, .row7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0px;
+}
+
+
+.milestone {
+    display: grid;
+    grid-template-columns: repeat(8, 65px);
+    grid-template-rows: repeat(6, 74px);
+    gap: 20px;
+    width: 654px;
+    height: 545px;
+}
+img{
+    width: 626px;
+    height: 545px;
+}
+
+.copyRight {
+    text-align: center;
+    font-size: 10px;
+}
+
+.row9 {
+    text-align: center;
+    font-family: $font;
+    color: $fontColorSecondary;
+}
+
+.jour, .copyRight{
+    font-family: $font;
+    color: $fontColorSecondary;
+    
+}
+
+.hr{
+    background-color: $fontColorSecondary;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+@keyframes bounce-hover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.moreJour {
+color: $fontColorSecondary;
+text-decoration: none;
+font-size: 15px;
+transition: color 0.3s, font-size 0.3s;
+font-family: $font;
+}
+
+.moreJour:hover {
+    color: $codeColor; 
+    font-size: 20px; 
+}
+
+.icon:hover {
+    animation: bounce-hover 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+// .icon:hover{
+//     0% {
+//         transform: scale(1);
+//     }
+//     50% {
+//         transform: scale(1.2);
+//     }
+// }
+
+
+
+// .mono1{
+//     font-family: $codeFont;
+//     color:$codeColor;
+//     font-size: $fontSizeCode;
+//     overflow: hidden; /* Ensures the content is not revealed until the animation */
+//     // border-right: .3em solid $activePage; /* The typwriter cursor */
+//     white-space: nowrap; /* Keeps the content on a single line */
+//     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+//     letter-spacing: .15em; /* Adjust as needed */
+//     animation:
+//       typing 6s steps(100, end),
+//       blink-caret 6s step-end ;
+//   }
+
+//   /* The typing effect */
+//   @keyframes typing {
+//     from { width: 0 }
+//     to { width: 70% }
+//   }
+
+// //   /* The typewriter cursor effect */
+// //   @keyframes blink-caret {
+// //     from, to { border-color: transparent }
+// //     25% { border-color: $activePage; }
+// //   }
+
+//   @keyframes slideInFromLeft {
+//     0% {
+//       transform: translateX(-100%);
+//     }
+//     100% {
+//       transform: translateX(0);
+//     }
+//   }

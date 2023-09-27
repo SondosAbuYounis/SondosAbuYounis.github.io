@@ -108,12 +108,12 @@ $bgNav:#487a9d0f;
     left: 0;
     width: 100%;
     height: 100%;
-    
+
 }
 
 .circles li{
     position: absolute;
-    
+
     display: block;
     list-style: none;
     width: 20px;
@@ -242,14 +242,14 @@ $bgNav:#487a9d0f;
     display: grid;
     align-items: center;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%; 
+    grid-template-rows: 50% 50%;
     align-content: end;
     margin: 5%;
     height: 5%;
     // display: flex;
     // flex-direction: column;
     // margin: 5%;
-    
+
 
 }
 
@@ -430,7 +430,7 @@ b {
     grid-template-rows:auto ;
 
 
-    // grid-template-areas: 
+    // grid-template-areas:
     // "1 2"
     // "3 4";
 
@@ -475,8 +475,8 @@ b {
     font-weight: bolder;
     padding-left: 0;
     font-size: 20px;
-    transform: translateX(-150%) translateY(500%); 
-   
+    transform: translateX(-150%) translateY(500%);
+
 }
 .h22{
     font-family: $font;
@@ -484,7 +484,7 @@ b {
     font-weight: bolder;
     padding-left: 0;
     font-size: 20px;
-    transform: translateX(-175%) translateY(45%); 
+    transform: translateX(-175%) translateY(45%);
 
 
 }
@@ -492,7 +492,7 @@ b {
 //     // display: flex;
 //     // flex-direction: row;
 //     // justify-content: center;
- 
+
 // }
 // .h2 {
 //     grid-column: 2;
@@ -505,7 +505,7 @@ b {
     grid-column: 1;
     display: flex;
     flex-direction: row;
-    
+
 }
 .h2f1{
     display: flex;
@@ -561,7 +561,7 @@ offset-path: path("M -75,155 A 100,80 0 0 0 50,-175");
 .css{
     // offset-path: path("M -70,-25 A 90,50 1 0 0 20,-20");
     offset-path: path("M -250,-250 A 80,50 0 0 0 50,-90");
-    
+
 
 }
 
@@ -585,7 +585,7 @@ offset-path: path("M -75,155 A 100,80 0 0 0 50,-175");
     animation-iteration-count: 1;
 }
 .arabic{
-    offset-path: path("M 80,250 A 100,80 0 0 1 200,200") ; 
+    offset-path: path("M 80,250 A 100,80 0 0 1 200,200") ;
 }
 .english{
     offset-path: path("M 90,200 A 100,110 0 0 1 200,200") ;
@@ -777,7 +777,7 @@ offset-path: path("M -75,155 A 100,80 0 0 0 50,-175");
     transition: visibility 0s, opacity 0.5s; /* Transition for smooth effect */
 }
 .sphere2:hover .sphere21{
-    visibility: visible;   
+    visibility: visible;
     transform: scale(1.5);
     opacity: 1;
     display: block;
@@ -930,7 +930,7 @@ font-family: $font;
 .h11Res,.h22Res{
     color: white;
 }
-@media  screen and (min-width: 280px) and (max-width: 912px) {
+@media  screen and (min-width: 280px) and (max-width: 920px) {
         .signature {
             width: 20%;
             height: 30%;
@@ -944,7 +944,7 @@ font-family: $font;
         font-size: $fontSizeCodeResp;
     }
     .name{
-        font-size: $fontSizeMainResp;          
+        font-size: $fontSizeMainResp;
     }
     b {
         font-size: $boldFontSizeResp;
@@ -1023,9 +1023,9 @@ font-family: $font;
 //     text-align: inline-block;
 //   }
 //   .h22{
-//     transform: translateX(-50%) translateY(75%); 
+//     transform: translateX(-50%) translateY(75%);
 //   }
-  
+
 // .figma, .postman, .sass, .css, .html{
 //     font-size: 11px;
 //     width: 50px;
@@ -1062,18 +1062,24 @@ font-family: $font;
         height: 15px;
     }
     .aboutSecRes{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows:auto ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-template-rows:auto ;
     height: 100%;
     width:100%;
-    column-gap: 20%;
+    row-gap: 10%;
     padding-top: 2%;
     }
     .h1Res{
-        grid-row: 1;
-        grid-column: 2;
-        margin-right: 10%;
+        // grid-row: 1;
+        // grid-column: 2;
+        margin-left: 20%;
+    }
+    .h2Res{
+        margin-right: 20%;
     }
     .h11Res{
         font-family: $font;
@@ -1089,18 +1095,19 @@ font-family: $font;
         // padding-top: 60%;
         font-weight: bolder;
         padding-left: 0;
-        font-size: 15px; 
+        font-size: 15px;
         text-align: center;
         display: block;
         color: #243859;
     }
-    .h2Res{
-        grid-row: 1;
-        grid-column: 1;
-        display: flex;
-        flex-direction: column;
-        
-    }
+    // .h2Res{
+    //     // grid-row: 1;
+    //     // grid-column: 1;
+    //     justify-self:left;
+    //     display: flex;
+    //     flex-direction: column;
+
+    // }
     .h2f1Res{
         display: flex;
         flex-direction: row;
@@ -1146,7 +1153,7 @@ font-family: $font;
     background-color: $fontColorMain;
     width: 55px;
     height: 55px;
-    margin: 5px;
+    margin: 0px 5px 0 5px;
 
 }
 }
@@ -1218,4 +1225,4 @@ font-family: $font;
 //     100% {
 //       transform: translateX(0);
 //     }
-//  
+//

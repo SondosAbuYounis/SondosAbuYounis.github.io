@@ -1,7 +1,7 @@
-##### Regarding this repo
+# Regarding this repo
 
 This is my first `Portfolio` =D
-feel free to check it out [SondosAbuYounis](http://127.0.0.1:5500/portFolio.html)
+feel free to check it out [SondosAbuYounis](https://sondosabuyounis.github.io/myFirstPortFolio/)
 
 **Direct Link to Figma** 
 -----

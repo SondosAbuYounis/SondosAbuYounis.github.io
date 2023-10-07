@@ -736,7 +736,7 @@ b {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  row-gap: 20px;
+  row-gap :  20px;
 }
 
 .sphere1 {
